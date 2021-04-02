@@ -3,7 +3,7 @@ from random import randint
 import datetime
 
 now = str(datetime.date.today()).split('-')
-token = ''
+token = 'Ваш VK токен'
 
 
 class GetPartnerInfo:

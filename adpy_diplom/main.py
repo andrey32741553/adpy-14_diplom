@@ -1,7 +1,7 @@
 from pprint import pprint
-from adpy_diplom.VKinter_queries import get_user_info, AddInfoToVKinterDB, VariableActionsWithDatingUsers
-from adpy_diplom.VKinter_classes import token
-from adpy_diplom.VKinter_database import Session, engine
+from VKinter_queries import get_user_info, AddInfoToVKinterDB, VariableActionsWithDatingUsers
+from VKinter_classes import token
+from VKinter_database import Session, engine
 
 print('Здравствуйте, Вас приветствует программа VKinter!')
 

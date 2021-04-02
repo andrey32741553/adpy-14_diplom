@@ -1,8 +1,8 @@
 from pprint import pprint
-from adpy_diplom.VKinter_database import VKUser, DatingUser, Photos, BlackList, Session, engine
-from adpy_diplom.VKinter_classes import GetPartnerInfo
+from VKinter_database import VKUser, DatingUser, Photos, BlackList, Session, engine
+from VKinter_classes import GetPartnerInfo
 import datetime
-from adpy_diplom.VKinter_classes import token
+from VKinter_classes import token
 
 
 def get_user_info():

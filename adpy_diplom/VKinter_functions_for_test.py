@@ -1,4 +1,4 @@
-from adpy_diplom.VKinter_database import Session, engine, VKUser
+from VKinter_database import Session, engine, VKUser
 
 connection = engine.connect()
 session = Session()

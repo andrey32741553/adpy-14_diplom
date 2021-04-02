@@ -1,6 +1,6 @@
-from adpy_diplom.VKinter_functions_for_test import show_list_of_dating_users, show_blacklist_of_dating_users,\
+from VKinter_functions_for_test import show_list_of_dating_users, show_blacklist_of_dating_users,\
     add_user_info
-from adpy_diplom.VKinter_database import engine
+from VKinter_database import engine
 
 connection = engine.connect()
 

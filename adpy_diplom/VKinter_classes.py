@@ -29,12 +29,15 @@ class GetPartnerInfo:
         while True:
             self.app_id = randint(1, 618607937)
             info_resp = self.making_info_response()
+            if "error" in info_resp.json().keys():
+                print("Вы не авторизованы. Введите Ваш VKtoken в переменную 'token'")
+                exit()
             user_data = info_resp.json()['response']
             try:
                 for item in user_data:
 
                     """ Здесь вычисляется возраст пользователя. Метод прост - просто отнимает от нынешнего года год 
-                    рождения пользователя. Решил числа и месяцы не использовать - погрешность небольшая """
+                    рождения пользователя. Числа и месяцы не используются - погрешность небольшая """
 
                     birth_date = item['bdate'].split('.')
                     age = int(now[0]) - int(birth_date[2])
@@ -54,7 +57,6 @@ class GetPartnerInfo:
                             link_list.sort(key=lambda x: (x[1], x[0]), reverse=True)
                             return user_data, link_list, age, self.min_desired_age, self.max_desired_age
             except:
-                """Здесь ловит исключение. Почему оно иногда вылезает - я не понял, поэтому решил его игнорировать"""
                 KeyError: 'relation'
 
     def making_info_response(self):

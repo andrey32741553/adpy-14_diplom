@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-db = 'postgresql://{}:{}@localhost:5432/VKinter'.format(os.getenv('DB_USER'), os.getenv('DB_PASSWORD'))
+db = 'postgresql://andrey:fylhtq32741553@localhost:5432/VKinter'#.format(os.getenv('DB_USER'), os.getenv('DB_PASSWORD'))
 engine = create_engine(db)
 Session = sessionmaker(bind=engine)
 
